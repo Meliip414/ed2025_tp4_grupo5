@@ -19,10 +19,10 @@ public:
 	 nombre(nombre), salud(salud), ataque(ataque), defensa(defensa) {}                                   
 	
 	// Getters
-	string getNombre() const { return nombre; }
-	int getSalud() const { return salud; }
-	int getAtaque() const { return ataque; }
-	int getDefensa() const { return defensa; }
+	string getNombre() { return nombre; }
+	int getSalud() { return salud; }
+	int getAtaque() { return ataque; }
+	int getDefensa() { return defensa; }
 	
 	// Setters
 	void setSalud(int nsalud) {
