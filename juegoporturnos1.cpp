@@ -107,7 +107,13 @@ public:
 		}
 	}
 };
-
+void menu1(int &op){
+	cout<<"-------------MENU------------"<<endl;
+	cout<<"1_Nuevo combate"<<endl;
+	cout<<"2_Cerrar"<<endl;
+	cout<<"-----------------------------"<<endl;
+	cout<<"Elegir opcion: ";cin>>op;
+}
 void tipodecombate(string &nombre){
 	int op;
 	do{
