@@ -31,14 +31,14 @@ public:
 		salud = (nuevaSalud < 0) ? 0 : nuevaSalud; //operador ternario
 	}
 	
-	// Métodos virtuales
+	// MÃ©todos virtuales
 	virtual void atacar(Personaje& objetivo) = 0;
 	
 	void recibirDanio(int danio) {
 		int danioFinal = danio - defensa;
 		if (danioFinal < 0) danioFinal = 0;
 		setSalud(salud - danioFinal);
-		cout << nombre << " recibió " << danioFinal << " de daño. Salud restante: " << salud << endl;
+		cout << nombre << " recibiÃ³ " << danioFinal << " de daÃ±o. Salud restante: " << salud << endl;
 	}
 	
 	bool estaVivo() const {
@@ -66,7 +66,7 @@ public:
 		: Personaje(nombre, 100, 35, 5) {}
 	
 	void atacar(Personaje& objetivo) override {
-		cout << getNombre() << " lanza un hechizo de fuego mágico." << endl;
+		cout << getNombre() << " lanza un hechizo de fuego mÃ¡gico." << endl;
 		objetivo.recibirDanio(getAtaque());
 	}
 };
@@ -105,13 +105,24 @@ public:
 	}
 };
 
-// Función principal
-int main() {
+// FunciÃ³n principal
+
 	
-	Guerrero guerrero("Arthas");
-	Mago mago("Merlin");
+	int main() {
+	string nombre;
+	int opcion;
 	
-	Combate pelea(&guerrero, &mago);
-	pelea.iniciar();
+	do{
+	menu1(opcion);
+	switch(opcion){
+		case 1: nose(nombre);break;
+		case 2: cout<<"Combate cancelado"<<endl; break;
+		default: 
+			if(opcion>2 || opcion<1)
+				cout<<"Opcion no disponible"<<endl;
+			break;
+	}
+	}while(opcion!=2);
+
 }
 
