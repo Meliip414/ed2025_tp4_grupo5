@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std ;
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -107,6 +106,7 @@ public:
 		}
 	}
 };
+
 void menu1(int &op){
 	cout<<"-------------MENU------------"<<endl;
 	cout<<"1_Nuevo combate"<<endl;
@@ -114,6 +114,7 @@ void menu1(int &op){
 	cout<<"-----------------------------"<<endl;
 	cout<<"Elegir opcion: ";cin>>op;
 }
+
 void menu2(int &op){
 	cout<<"-------------MENU------------"<<endl;
 	cout<<"1_mago vs mago"<<endl;
@@ -123,6 +124,7 @@ void menu2(int &op){
 	cout<<"-----------------------------"<<endl;
 	cout<<"Elegir combate: ";cin>>op;
 }
+
 void tipodecombate(string &nombre){
 	int op;
 	do{
@@ -164,8 +166,6 @@ void tipodecombate(string &nombre){
 }
 
 // Función principal
-
-	
 	int main() {
 	string nombre;
 	int opcion;
