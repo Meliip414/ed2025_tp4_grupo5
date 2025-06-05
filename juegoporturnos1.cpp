@@ -42,7 +42,7 @@ public:
 		cout << nombre << " recibió " << danioFinal << " de daño. Salud restante: " << salud << endl;
 	}
 	
-	bool estaVivo() const {
+	bool estaVivo() {
 		return salud > 0;
 	}
 	
