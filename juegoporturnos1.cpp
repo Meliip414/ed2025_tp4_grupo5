@@ -25,11 +25,11 @@ public:
 	int getDefensa() const { return defensa; }
 	
 	// Setters
-	void setSalud(int nuevaSalud) {
-	     if (nuevaSalud < 0) 
+	void setSalud(int nsalud) {
+	     if (nsalud < 0) 
                  salud = 0;
              else
-                 salud = nuevaSalud;
+                 salud = nsalud;
         }
 	
 	// Métodos virtuales
