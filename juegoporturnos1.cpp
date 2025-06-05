@@ -5,7 +5,7 @@
 
 using namespace std;
 
-// Clase base
+// Clase padre
 class Personaje {
 private:
 	string nombre;
@@ -51,8 +51,7 @@ public:
 // Clase Guerrero
 class Guerrero : public Personaje {
 public:
-	Guerrero(string nombre)
-		: Personaje(nombre, 100, 25, 10) {}
+	Guerrero(string nombre) : Personaje(nombre, 100, 25, 10) {}
 	
 	void atacar(Personaje& objetivo) override {
 		cout << getNombre() << " lanza un ataque poderoso con su espada." << endl;
@@ -63,8 +62,7 @@ public:
 // Clase Mago
 class Mago : public Personaje {
 public:
-	Mago(string nombre)
-		: Personaje(nombre, 100, 35, 5) {}
+	Mago(string nombre) : Personaje(nombre, 100, 35, 5) {}
 	
 	void atacar(Personaje& objetivo) override {
 		cout << getNombre() << " lanza un hechizo de fuego mágico." << endl;
