@@ -105,6 +105,46 @@ public:
 	}
 };
 
+void tipodecombate(string &nombre){
+	int op;
+	do{
+		menu2(op);
+		switch(op){
+			case 1:
+			{	cout<<"1er jugador: ";cin>>nombre;
+				Mago mago1(nombre);
+				cout<<"2do jugador: ";cin>>nombre;
+				Mago mago2(nombre);
+				Combate pelea(&mago1, &mago2);
+				pelea.iniciar();}
+			break;
+		
+			case 2:
+			{	cout<<"1er jugador: ";cin>>nombre;
+				Guerrero guerrero1(nombre);
+				cout<<"1er jugador: ";cin>>nombre;
+				Guerrero guerrero2(nombre);
+				Combate pelea(&guerrero1, &guerrero2); 
+				pelea.iniciar();}
+			break;
+			
+			case 3:
+			{	cout<<"1er jugador(querrero): ";cin>>nombre;
+				Guerrero guerrero(nombre);
+				cout<<"2do jugador(mago): ";cin>>nombre;
+				Mago mago(nombre);
+				Combate pelea(&guerrero, &mago);
+				pelea.iniciar(); }
+			
+			default: 
+				if(op>4 || op<1)
+				cout<<"Opcion no disponible"<<endl;
+			break;
+			}
+		}while(op!=4);
+			
+}
+
 // Función principal
 
 	
@@ -115,7 +155,7 @@ public:
 	do{
 	menu1(opcion);
 	switch(opcion){
-		case 1: nose(nombre);break;
+		case 1: tipodecombate(nombre);break;
 		case 2: cout<<"Combate cancelado"<<endl; break;
 		default: 
 			if(opcion>2 || opcion<1)
