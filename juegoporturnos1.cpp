@@ -114,6 +114,15 @@ void menu1(int &op){
 	cout<<"-----------------------------"<<endl;
 	cout<<"Elegir opcion: ";cin>>op;
 }
+void menu2(int &op){
+	cout<<"-------------MENU------------"<<endl;
+	cout<<"1_mago vs mago"<<endl;
+	cout<<"2_guerrero vs guerrero"<<endl;
+	cout<<"3_guerrero vs mago"<<endl;
+	cout<<"4_Cancelar"<<endl;
+	cout<<"-----------------------------"<<endl;
+	cout<<"Elegir combate: ";cin>>op;
+}
 void tipodecombate(string &nombre){
 	int op;
 	do{
