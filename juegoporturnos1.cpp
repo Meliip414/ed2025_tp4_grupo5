@@ -28,8 +28,11 @@ public:
 	
 	// Setters
 	void setSalud(int nuevaSalud) {
-		salud = (nuevaSalud < 0) ? 0 : nuevaSalud; //operador ternario
-	}
+	     if (nuevaSalud < 0) 
+                 salud = 0;
+             else
+                 salud = nuevaSalud;
+        }
 	
 	// Métodos virtuales
 	virtual void atacar(Personaje& objetivo) = 0;
