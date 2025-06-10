@@ -65,13 +65,13 @@ public:
 		cout << nombre << " se ha curado. Salud restante " << salud <<endl;
 	}
 	
-	//El personaje esta vivo
+	//Saber si el personaje esta vivo
 	bool estaVivo() {
 		return salud > 0;
 	}
 	
 };
-
+// Turno jugado
 bool turnoJugado(bool turn){
 		return turn == true;
 }
